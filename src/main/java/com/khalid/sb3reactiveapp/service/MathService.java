@@ -1,11 +1,10 @@
 package com.khalid.sb3reactiveapp.service;
 
+import com.khalid.sb3reactiveapp.exception.InputNumberValidationException;
 import com.khalid.sb3reactiveapp.modal.MathResponse;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.Map;
 
 @Service
 public class MathService {
@@ -14,8 +13,14 @@ public class MathService {
         return Mono.fromSupplier(() -> intNum * intNum).map(MathResponse::new);
     }
 
-    public Flux<MathResponse> getMultiplicationTable(int inNum){
-        return Flux.range(1 , 10)
+    public Flux<MathResponse> getMultiplicationTable(int inNum) {
+        return Flux.range(1, 10).handle((integer, synchronousSink) -> {
+                    if (inNum > 1000)
+                        synchronousSink.error(new InputNumberValidationException(String.format("Input Supplied is %d ", inNum)));
+                    else
+                        synchronousSink.next(integer);
+                })
+                .cast(Integer.class)
                 .map(in -> in * inNum)
                 .map(MathResponse::new);
     }

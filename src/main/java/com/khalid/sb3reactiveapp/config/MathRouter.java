@@ -15,18 +15,30 @@ import java.util.function.BiFunction;
 @Configuration
 public class MathRouter {
 
+    private final MathHandler mathHandler;
+
+    public MathRouter(MathHandler mathHandler) {
+        this.mathHandler = mathHandler;
+    }
+
     @Bean
-    public RouterFunction<ServerResponse> routerFunction(MathHandler mathHandler) {
+    public RouterFunction<ServerResponse> mainRouter() {
+        return RouterFunctions
+                .route().path("router", this::routerFunction)
+                .build();
+    }
+
+    public RouterFunction<ServerResponse> routerFunction() {
         return RouterFunctions
                 .route()
-                .GET("/router/math/square/{num}", mathHandler::getSquare)
-                .GET("/router/math/table/{num}", mathHandler::getNumTable)
+                .GET("math/square/{num}", mathHandler::getSquare)
+                .GET("math/table/{num}", mathHandler::getNumTable)
                 .onError(InputNumberValidationException.class, serverRequestExceptionHandler())
                 .build();
     }
 
-    private BiFunction<Throwable, ServerRequest, Mono<ServerResponse>> serverRequestExceptionHandler(){
-        return  (throwable, serverRequest) -> {
+    private BiFunction<Throwable, ServerRequest, Mono<ServerResponse>> serverRequestExceptionHandler() {
+        return (throwable, serverRequest) -> {
             InputNumberValidationException validationException = (InputNumberValidationException) throwable;
             ExceptionResponse exceptionResponse = new ExceptionResponse(InputNumberValidationException.getErrCode(), validationException.getMessage(), validationException.getResponseMsg());
             return ServerResponse.badRequest().bodyValue(exceptionResponse);

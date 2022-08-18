@@ -1,13 +1,13 @@
-package com.khalid.sb3reactiveapp;
+package com.khalid.sbreactive.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Sb3ReactiveAppApplication {
+public class SbReactiveAppApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Sb3ReactiveAppApplication.class, args);
+        SpringApplication.run(SbReactiveAppApplication.class, args);
     }
 
 }

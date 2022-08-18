@@ -1,7 +1,7 @@
-package com.khalid.sb3reactiveapp.exceptionhandler;
+package com.khalid.sbreactive.app.exceptionhandler;
 
-import com.khalid.sb3reactiveapp.exception.InputNumberValidationException;
-import com.khalid.sb3reactiveapp.modal.ExceptionResponse;
+import com.khalid.sbreactive.app.exception.InputNumberValidationException;
+import com.khalid.sbreactive.app.modal.ExceptionResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

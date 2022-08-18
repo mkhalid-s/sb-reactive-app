@@ -1,4 +1,4 @@
-package com.khalid.sb3reactiveapp.modal;
+package com.khalid.sbreactive.app.modal;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

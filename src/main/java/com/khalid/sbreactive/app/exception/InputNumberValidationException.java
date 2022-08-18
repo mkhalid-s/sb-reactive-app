@@ -1,4 +1,4 @@
-package com.khalid.sb3reactiveapp.exception;
+package com.khalid.sbreactive.app.exception;
 
 public class InputNumberValidationException extends RuntimeException{
 

@@ -1,8 +1,8 @@
-package com.khalid.sb3reactiveapp.config;
+package com.khalid.sbreactive.app.config;
 
-import com.khalid.sb3reactiveapp.exception.InputNumberValidationException;
-import com.khalid.sb3reactiveapp.modal.MathResponse;
-import com.khalid.sb3reactiveapp.service.MathService;
+import com.khalid.sbreactive.app.exception.InputNumberValidationException;
+import com.khalid.sbreactive.app.modal.MathResponse;
+import com.khalid.sbreactive.app.service.MathService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

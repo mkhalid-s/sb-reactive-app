@@ -1,7 +1,7 @@
-package com.khalid.sb3reactiveapp.service;
+package com.khalid.sbreactive.app.service;
 
-import com.khalid.sb3reactiveapp.exception.InputNumberValidationException;
-import com.khalid.sb3reactiveapp.modal.MathResponse;
+import com.khalid.sbreactive.app.exception.InputNumberValidationException;
+import com.khalid.sbreactive.app.modal.MathResponse;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

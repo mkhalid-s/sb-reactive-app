@@ -1,8 +1,7 @@
-package com.khalid.sb3reactiveapp.modal;
+package com.khalid.sbreactive.app.modal;
 
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data

@@ -1,10 +1,10 @@
-package com.khalid.sb3reactiveapp;
+package com.khalid.sbreactive.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Sb3ReactiveAppApplicationTests {
+class SbReactiveAppApplicationTests {
 
     @Test
     void contextLoads() {

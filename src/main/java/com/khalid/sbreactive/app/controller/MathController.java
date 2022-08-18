@@ -1,7 +1,7 @@
-package com.khalid.sb3reactiveapp.controller;
+package com.khalid.sbreactive.app.controller;
 
-import com.khalid.sb3reactiveapp.modal.MathResponse;
-import com.khalid.sb3reactiveapp.service.MathService;
+import com.khalid.sbreactive.app.modal.MathResponse;
+import com.khalid.sbreactive.app.service.MathService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

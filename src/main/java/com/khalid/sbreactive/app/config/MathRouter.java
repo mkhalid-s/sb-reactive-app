@@ -1,7 +1,7 @@
-package com.khalid.sb3reactiveapp.config;
+package com.khalid.sbreactive.app.config;
 
-import com.khalid.sb3reactiveapp.exception.InputNumberValidationException;
-import com.khalid.sb3reactiveapp.modal.ExceptionResponse;
+import com.khalid.sbreactive.app.exception.InputNumberValidationException;
+import com.khalid.sbreactive.app.modal.ExceptionResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;
